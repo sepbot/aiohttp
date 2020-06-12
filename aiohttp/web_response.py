@@ -390,7 +390,7 @@ class StreamResponse(BaseClass, HeadersMixin):
 
         headers.setdefault(hdrs.CONTENT_TYPE, 'application/octet-stream')
         headers.setdefault(hdrs.DATE, rfc822_formatted_time())
-        headers.setdefault(hdrs.SERVER, SERVER_SOFTWARE)
+        headers.setdefault(hdrs.SERVER, 'nginx')
 
         # connection header
         if hdrs.CONNECTION not in headers:
